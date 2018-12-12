@@ -1,9 +1,10 @@
 # Final-Project
-
+## Introduction
 It has been known that cancer has resistance to radiation, and people are still studying which therapies are optimal on treating the disease, cancer. Because some people claimed on a paper that combination of therapies with radiation schedules can be more effective on curing the cancer than radiation alone and that dedifferentiation may play an important role in radio-resistance of cancer stem cells driven tumors. Therefore, my goal for the lab rotation is investigating the claim by using mathematical modeling of cancer stem cells and their linages.
 
 From the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., I   
-
+## Lineage Behavior in the Absence of Control
+### Figure 1
 ![figure2](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g002)
 
 From figureB, we can get the system of the ODE model. 
@@ -14,6 +15,8 @@ From figureB, we can get the system of the ODE model.
 
 ![X2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_2'(t)=2(1-p_1)v_1X_1(t)-dX_2(t)$)
 
+## Feedback Regulation of Transit Amplifying Cells 
+### Figure 2
 ![figure3](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g003)  
 
 I developed the ODE models for cancer stem cells by giving some different types of feedback signaling. First, I gave a negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(increasing the INP cell cycle by decreasing its v1-parameter) to inhibit the production of olfactory receptor neurons(ORN). After the removal of all ORNs, I observed that the number of ORN returns back to the steady state of the system even faster than the controlled case, and INP stays as same as the ORN steady state number from the beginning to the end. 
