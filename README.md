@@ -4,7 +4,7 @@ It has been known that cancer has resistance to radiation, and people are still 
 
 From the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., I   
 
-![1](https://blog.naver.com/PostView.nhn?blogId=cjh4224&Redirect=View&logNo=221418062598&categoryNo=1&isAfterWrite=true&isMrblogPost=false&isHappyBeanLeverage=true&contentLength=9785&redirect=View&widgetTypeCall=true&directAccess=false#)  
+![1](https://blogfiles.pstatic.net/MjAxODEyMTJfMjU4/MDAxNTQ0NjI1NTI5OTM0.9cR4_gzb9b4fFlbPcUFT-crMHoFZGtZiDjMo6nvrs2Ag.NPO1Jub_rsJNFtJUpu9zxYMW1TrywpoDrgzAy7uASR8g.JPEG.cjh4224/Screenshot_20181212-063153.jpg)  
 
 I developed the ODE models for cancer stem cells by giving some different types of feedback signaling. First, I gave a negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(increasing the INP cell cycle by decreasing its v1-parameter) to inhibit the production of olfactory receptor neurons(ORN). After the removal of all ORNs, I observed that the number of ORN returns back to the steady state of the system even faster than the controlled case, and INP stays as same as the ORN steady state number from the beginning to the end. 
 Then I gave another negative feedback on the INP replication probability, decreasing p1-parameter, to slow the INP divisions. After perturbation, the regeneration rate of ORN becomes 100 times faster than that without feedback, but the INP cell number suddenly increases at the beginning but rapidly decreases close to its steady state value(which is quite low) because the burst of INP proliferation causes the ORN production. 
