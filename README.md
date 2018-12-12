@@ -3,8 +3,8 @@
 It has been known that cancer has resistance to radiation, and people are still studying which therapies are optimal on treating the disease, cancer. Because some people claimed on a paper that combination of therapies with radiation schedules can be more effective on curing the cancer than radiation alone and that dedifferentiation may play an important role in radio-resistance of cancer stem cells driven tumors. Therefore, my goal for the lab rotation is investigating the claim by using mathematical modeling of cancer stem cells and their linages.
 
 From the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., I   
-![figure2](https://blogfiles.pstatic.net/MjAxODEyMTJfMjcz/MDAxNTQ0NjI1NTMzMzE0.bPcwPn-iNnUiOgilQSfR_1buTx-dbKyoiypMYun6FoYg.cyIi1ifnfiSf58wMS2dcs0ixuypZRDHi9fGNhNi0Urog.PNG.cjh4224/Screenshot_20181212-063038.png)
 
+![figure2](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g002)
 
 From figureB, we can get the system of the ODE model. 
 
