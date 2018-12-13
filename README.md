@@ -19,6 +19,22 @@ From figureB, we can get the system of the ODE model.
 ### Figure 2
 ![figure3](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g003)  
 
+
+![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
+
+![v1](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t)=2(1-p_0)v_0X_0(t)&plus;(2p_1-1)\frac{v_1}{1&plus;hX_2(t)}X_1(t),)
+
+![v2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_2'(t)=2(1-p_1)\frac{v_1}{1&plus;hX_2(t)}X_1(t)-dX_2(t))
+
+
+![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
+
+![p1](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t)=2(1-p_0)v_0X_0(t)&plus;(2\frac{p_1}{1&plus;gX_2(t)}-1)v_1X_1(t),)
+
+![p2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_2'(t)=2(1-\frac{p_1}{1&plus;gX_2(t)})v_1X_1(t)-dX_2(t))
+
+
+
 $X_0'(t)=(2p_0-1)v_0X_0(t),
 X_1'(t)=2(1-p_0)v_0X_0(t)+(2p_1-1)\frac{v_1}{1+h*X_2(t)}X_1(t),
 X_2'(t)=2(1-p_1)\frac{v_1}{1+h*X_2(t)}X_1(t)-dX_2(t)$
