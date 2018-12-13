@@ -22,7 +22,7 @@ The olfactactory epithelium(OE) of the mouse is useful to study lineage progress
 ![figure3](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g003)  
 
 ## Feedback Control of Transit Amplifying Cells
-GDF11, a member of transforming growth factor, was shown to be produced specifically by cells of the neuronal lineage of the mouse OE, and to provide feedback to inhibit the production of neurons(ORN). The feedback actions of GDF11 seem to directed at INPs, and GDF11 regulates tissue size by inhibiting the proliferation of transit amplifying cells. Therefore, they model GDF11-mediated negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
+GDF11, a member of transforming growth factor, was shown to be produced specifically by cells of the neuronal lineage of the mouse OE, and to provide feedback to inhibit the production of neurons (ORN). The feedback actions of GDF11 seem to directed at INPs, and GDF11 regulates tissue size by inhibiting the proliferation of transit amplifying cells. Therefore, they model GDF11-mediated negative feedback regulation on the INP cell cycle length (Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
 
  ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
@@ -121,7 +121,7 @@ However, they claim that feeding back onto the rate at which INPs divide does no
 
 By decreasing p1-parameter, they try to slow the INP divisions. After perturbation, the regeneration rate of ORN becomes 100 times faster than that without feedback(Figure2E). However, the INP cell number suddenly increases at the beginning but rapidly decreases close to its steady state value(which is quite low) because the burst of INP proliferation causes the ORN production. 
 
-Here, I resimulated this feedback by using R studio.
+The following is my R script for the resimulation of the system on p1 feedback.
 
     $cd Homework4
     $module load rstudio/0.99.9.9
@@ -180,4 +180,4 @@ Here, I resimulated this feedback by using R studio.
 
 ![figure3E](https://blogfiles.pstatic.net/MjAxODEyMTRfMjUg/MDAxNTQ0NzE1NTU0MTUw.xQoouoMQ7rBjhtTk3HgGFBFto_HLVgYrhzJNCyl0I5Qg.WPudy8QBuvqlORGSgOX7mYQ9z8-F57AdfMU-mpMtkmcg.PNG.cjh4224/figure3E.png)
 
-From these simulations, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid generation. 
+From these simulations, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid regeneration. 
