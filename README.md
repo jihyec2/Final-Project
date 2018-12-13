@@ -35,6 +35,8 @@ They develope the ODE models for cancer stem cells by giving some different type
 
  First, they give a negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
  
+ 
+ 
  ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
 ![v1](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t)=2(1-p_0)v_0X_0(t)&plus;(2p_1-1)\frac{v_1}{1&plus;hX_2(t)}X_1(t),)
@@ -119,7 +121,7 @@ Here, I resimulated this feedback by using R studio(I accessed R studio through 
 
     Figure3C + labs(title="(-) Feedback on the INP cell cycle length", x="time(ln(2)/v1)", y="Cell Number") 
 
-![figure3c]()
+![figure3c](https://blogfiles.pstatic.net/MjAxODEyMTRfMjY1/MDAxNTQ0NzE1ODMwMDU3.hlmOxppOOr2U2ksbLsTlSEqz1ebbrfJPQl4LtoEGt40g.84rTNz2lJZVITfGsP3zv7oU5H6neacgNNCReAeW9Wgwg.PNG.cjh4224/figure3C.png)
 
 
 However, they claim that feeding back onto the rate at which INPs divide does not seem to be a good control strategy, so they feed back onto a different parameter of INP growth, p1, to see whether GDF11 might do a better job(Figure 2D). The following is the system of the ordinary differential equations with the negative feedback on the INP replication probability, p1,  
@@ -189,4 +191,6 @@ I resimulated this feedback by using R studio.
 
     Figure3E + labs(title="(-) Feedback on the INP replication probability", x="time(ln(2)/v1)", y="Cell Number") 
 
+![figure3E](https://blogfiles.pstatic.net/MjAxODEyMTRfMjUg/MDAxNTQ0NzE1NTU0MTUw.xQoouoMQ7rBjhtTk3HgGFBFto_HLVgYrhzJNCyl0I5Qg.WPudy8QBuvqlORGSgOX7mYQ9z8-F57AdfMU-mpMtkmcg.PNG.cjh4224/figure3E.png)
 
+From this result, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid generation, 
