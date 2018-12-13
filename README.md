@@ -1,26 +1,18 @@
 # Final-Project
 ## Introduction
-It has been known that cancer has resistance to radiation, and people are still studying which therapies are optimal on treating the disease, cancer. Because some people claimed on a paper that combination of therapies with radiation schedules can be more effective on curing the cancer than radiation alone and that dedifferentiation may play an important role in radio-resistance of cancer stem cells driven tumors. Therefore, my goal for the lab rotation is investigating the claim by using mathematical modeling of cancer stem cells and their linages.
+
+The goal for the study ito invs estigate the roles of the cell lineage stages in the control of tissue and organ growth. The most obvious objectives of a growth control system is to reach and maintain a specified size, but because there are many genetic facctors that can affect final size of orgen, there are diverse molecular pathways that may regulate size. 
 
 
-The goal for the study is to investigate the roles of the cell lineage stages in the control of tissue and organ growth. The most obvious objectives of a growth control system is to reach and maintain a specified size, but because there are many genetic facctors that can affect final size of orgen, there are diverse molecular pathways that may regulate size. 
+In recent studies, cell lineages are considered as fundamental units of tissue and organ development, maintenance, and regeneration, and stem cells, which have ability to produce many cell types and to maintain their own number through self replication, are found at the begining of lineages. Therefore, scientists get interested in studying them with the mechanisms underlying the execution and regulation of cell lineages to use the knowledge to repair injury and to cure disease, such as cancer or tumor. Because lineage intermediates often display the ability of self-replication, it is suggested that lineage play crucial roles in controlling tissue and organ growth (cell population growth). So on the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., the authors use the context of the mammalian olfactactory epithelium(OE) to study the relationship between lineages and growth control. They investigate how negative feedback factors may be used to control the output of multistage cell lineages, as exemplified by the actions of GDF11 and activin in a self-renewing neural tissue, OE.   
 
-
-
-Here, we are going to concentrate on the model with three differential equations.
-
-
-
-From the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., I   
 ## Lineage Behavior in the Absence of Control
 ### Figure 1
 ![figure2](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g002)
 
-To identify the control needs of a system, they build models and explore their behaviors. Figure 1A is a general representation of an unbranched cell lineage that begins with stem cells (type 0), has arbitrary number of transit-ampliifying stages(type 1 to n-1) and ends with a postmitotic terminal stage cell type(type n). The parametrs ![v](https://latex.codecogs.com/gif.latex?\dpi{120}&space;v_i) and ![p](https://latex.codecogs.com/gif.latex?\dpi{120}&space;p_i) represent the rate constants of cell cycle progression and the replication probabilities for each stage, respectively, and ![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;d) stands for the cell-death rate constant which represent the turnover of the terminal stage cell. This cell lineage behavior can be also represented by mathematical modeling, a system of ordinary differential equations. (Figure1B) In these equations, ![x](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_i) is type i cell number at time t, and each differential equation represents the rate of change on the population of each cell type. The differential equations for the transit amplifying stages (![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t),...X_{n-1}'(t)))can be represented by the sum of the production by cells of the previous lineage stage and net production(or loss) by the replication(or differentiation) of cells at the same lineage stage. 
+To identify the control needs of a system, the authors build models and explore their behaviors. Figure 1A is a general representation of an unbranched cell lineage that begins with stem cells (type 0), has arbitrary number of transit-ampliifying stages(type 1 to n-1) and ends with a postmitotic terminal stage cell type(type n). The parametrs ![v](https://latex.codecogs.com/gif.latex?\dpi{120}&space;v_i) and ![p](https://latex.codecogs.com/gif.latex?\dpi{120}&space;p_i) represent the rate constants of cell cycle progression and the replication probabilities for each stage, respectively, and ![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;d) stands for the cell-death rate constant which represent the turnover of the terminal stage cell. This cell lineage behavior can be also represented by mathematical modeling, a system of ordinary differential equations. (Figure1B) In these equations, ![x](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_i) is type i cell number at time t, and each differential equation represents the rate of change on the population of each cell type. The differential equations for the transit amplifying stages (![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t),...X_{n-1}'(t)))can be represented by the sum of the production by cells of the previous lineage stage and net production(or loss) by the replication(or differentiation) of cells at the same lineage stage. 
 
-Here, we construct a mathematical model with three differential equations in the absence of the feedback regulation.
-
-On figure 2, the neuronal lineage of the olfactory epithelium (OE), in which terminally differentiated ORNs are produced by committed transit amplifying cells(INPs) are shown, and its mathematical model can be formed with 
+Here, they construct a mathematical model with three differential equations in the absence of the feedback regulation.
 
 ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
@@ -28,15 +20,17 @@ On figure 2, the neuronal lineage of the olfactory epithelium (OE), in which ter
 
 ![X2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_2'(t)=2(1-p_1)v_1X_1(t)-dX_2(t)$)
 
-## Feedback Control of Transit Amplifying Cells
+
 ### Figure 2
-They develope the ODE models for cancer stem cells by giving some different types of feedback signaling.
 ![figure3](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g003)  
 
+
+
+On figure 2, the neuronal lineage of the olfactory epithelium (OE), in which terminally differentiated ORNs are produced by committed transit amplifying cells(INPs) are shown, and its mathematical model can be formed with 
+
+
  First, they give a negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
- 
- 
- 
+
  ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
 ![v1](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t)=2(1-p_0)v_0X_0(t)&plus;(2p_1-1)\frac{v_1}{1&plus;hX_2(t)}X_1(t),)
@@ -132,9 +126,9 @@ However, they claim that feeding back onto the rate at which INPs divide does no
 
 ![p2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_2'(t)=2(1-\frac{p_1}{1&plus;gX_2(t)})v_1X_1(t)-dX_2(t))
 
-By decreasing p1-parameter, they try to slow the INP divisions. After perturbation, the regeneration rate of ORN becomes 100 times faster than that without feedback, but the INP cell number suddenly increases at the beginning but rapidly decreases close to its steady state value(which is quite low) because the burst of INP proliferation causes the ORN production. 
+By decreasing p1-parameter, they try to slow the INP divisions. After perturbation, the regeneration rate of ORN becomes 100 times faster than that without feedback(Figure2E). However, the INP cell number suddenly increases at the beginning but rapidly decreases close to its steady state value(which is quite low) because the burst of INP proliferation causes the ORN production. 
 
-I resimulated this feedback by using R studio.
+Here, I resimulated this feedback by using R studio.
 
     $cd Homework4
     $module load rstudio/0.99.9.9
@@ -193,4 +187,4 @@ I resimulated this feedback by using R studio.
 
 ![figure3E](https://blogfiles.pstatic.net/MjAxODEyMTRfMjUg/MDAxNTQ0NzE1NTU0MTUw.xQoouoMQ7rBjhtTk3HgGFBFto_HLVgYrhzJNCyl0I5Qg.WPudy8QBuvqlORGSgOX7mYQ9z8-F57AdfMU-mpMtkmcg.PNG.cjh4224/figure3E.png)
 
-From this result, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid generation, 
+From these simulations, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid generation. 
