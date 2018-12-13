@@ -1,4 +1,4 @@
-# Final-Project
+# Final Project for EE282 by Jihye Choi(94323474)
 ## Introduction
 
 In recent studies, cell lineages are considered as fundamental units of tissue and organ development, maintenance, and regeneration, and stem cells, which have ability to produce many cell types and to maintain their own number through self replication, are found at the begining of lineages. Therefore, scientists get interested in studying them with the mechanisms underlying the execution and regulation of cell lineages to use the knowledge to repair injury and to cure disease, such as cancer or tumor. Because lineage intermediates often display the ability of self-replication, it is suggested that lineage play crucial roles in controlling tissue and organ growth (cell population growth). So on the article "Cell Lineages and the Logic of Proliferative Control" by Lander et al., the authors use the context of the mammalian olfactactory epithelium(OE) to study the relationship between lineages and growth control. They investigate how negative feedback factors may be used to control the output of multistage cell lineages, as exemplified by the actions of GDF11 and activin in a self-renewing neural tissue, OE.   
@@ -9,10 +9,11 @@ In recent studies, cell lineages are considered as fundamental units of tissue a
 
 To identify the control needs of a system, the authors build models and explore their behaviors. Figure 1A is a general representation of an unbranched cell lineage that begins with stem cells (type 0), has arbitrary number of transit-ampliifying stages(type 1 to n-1) and ends with a postmitotic terminal stage cell type(type n). The parametrs ![v](https://latex.codecogs.com/gif.latex?\dpi{120}&space;v_i) and ![p](https://latex.codecogs.com/gif.latex?\dpi{120}&space;p_i) represent the rate constants of cell cycle progression and the replication probabilities for each stage, respectively, and ![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;d) stands for the cell-death rate constant which represent the turnover of the terminal stage cell. This cell lineage behavior can be also represented by mathematical modeling, a system of ordinary differential equations. (Figure1B) In these equations, ![x](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_i) is type i cell number at time t, and each differential equation represents the rate of change on the population of each cell type. The differential equations for the transit amplifying stages (![d](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_1'(t),...X_{n-1}'(t)))can be represented by the sum of the production by cells of the previous lineage stage and net production(or loss) by the replication(or differentiation) of cells at the same lineage stage. 
 
+The olfactactory epithelium(OE) of the mouse is useful to study lineage progression and feedback because of its self renewal, well defined lineage stages, and many other factors. The OE neuronal lineage consists of a stem cell, which give rise to cells that express another proneural gene, Immediate Neuronal Precursor(INP), which is a transit amplifying cell stage. The INP appears to give rise to terminally differentiated cell, olfactory receptor neurons(ORNs) (Figure 2A). The following system is the mathematical model for this lineage, consisting with three ordinary differential equations, in the absence of the feedback regulation.
+
+
 ### Figure 2
 ![figure3](https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=info:doi/10.1371/journal.pbio.1000015.g003)  
-
-The olfactactory epithelium(OE) of the mouse is useful to study lineage progression and feedback because of its self renewal, well defined lineage stages, and many other factors. The OE neuronal lineage consists of a stem cell, which give rise to cells that express another proneural gene, Immediate Neuronal Precursor(INP), which is a transit amplifying cell stage. The INP appears to give rise to terminally differentiated cell, olfactory receptor neurons(ORNs) (Figure 2A). The following system is the mathematical model for this lineage, consisting with three ordinary differential equations, in the absence of the feedback regulation.
 
 ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
@@ -21,9 +22,7 @@ The olfactactory epithelium(OE) of the mouse is useful to study lineage progress
 ![X2](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_2'(t)=2(1-p_1)v_1X_1(t)-dX_2(t)$)
 
 ## Feedback Control of Transit Amplifying Cells
-GDF11, a member of transforming growth factor, was shown to be produced specifically by cells of the neuronal lineage of the mouse OE, and to provide feedback to inhibit the production of neurons(ORN) 
-
- First, they give a negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
+GDF11, a member of transforming growth factor, was shown to be produced specifically by cells of the neuronal lineage of the mouse OE, and to provide feedback to inhibit the production of neurons(ORN). The feedback actions of GDF11 seem to directed at INPs, and GDF11 regulates tissue size by inhibiting the proliferation of transit amplifying cells. Therefore, they model GDF11-mediated negative feedback regulation on the Immediate Neuronal Precursor(INP) cell cycle length(Figure2B). The following is the system of the ordinary differential equations with the feedback on v1. 
 
  ![X0](https://latex.codecogs.com/gif.latex?\dpi{120}&space;$X_0'(t)=(2p_0-1)v_0X_0(t),$)
 
