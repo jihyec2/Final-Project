@@ -181,3 +181,6 @@ The following is my R script for the resimulation of the system on p1 feedback.
 ![figure3E](https://blogfiles.pstatic.net/MjAxODEyMTRfMjUg/MDAxNTQ0NzE1NTU0MTUw.xQoouoMQ7rBjhtTk3HgGFBFto_HLVgYrhzJNCyl0I5Qg.WPudy8QBuvqlORGSgOX7mYQ9z8-F57AdfMU-mpMtkmcg.PNG.cjh4224/figure3E.png)
 
 From these simulations, the authors conclude that the system with the feedback regulation on p1 shows more useful and realistic behaviors than that on v1, and it raised the possibility that the actual target of GDF11 might be p1, not v1. Moreover, the lineage feed back onto p1 seems to be an effective strategy for meeting two control objectives: steady state robustness(low sensitivity to stem cell number ![x00](https://latex.codecogs.com/gif.latex?\dpi{120}&space;X_0)), cell division rates v, and the death rate constant d) and rapid regeneration. 
+
+## References
+Lander, Arthur D, et al. “Cell Lineages and the Logic of Proliferative Control.” PLoS Biology, vol. 7, no. 1, 2009, doi:10.1371/journal.pbio.1000015.
